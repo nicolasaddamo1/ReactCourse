@@ -4,7 +4,7 @@ import { useState } from "react";
 function List() {
     const [items, setItems] = useState(frameworksList);
 
-    function functionFilterItems(searchPattern) {
+    function filterItems(searchPattern) {
         if (searchPattern === '') {
             setItems(frameworksList);
         } else {
@@ -18,7 +18,7 @@ function List() {
     }
     return (
         <div className="list">
-            <ListView elements={items} functionFilterItems={functionFilterItems} />
+            <ListView elements={items} functionFilterItems={filterItems} />
         </div>
     )
 }

@@ -1,11 +1,14 @@
-function ListView(elements, functionFilterItems) {
+
+function ListView({ elements, functionFilterItems }) {
     return (
         <>
-            <input type="text" placeholder="Filtrar"
-                onChange={ev => functionFilterItems(ev.target.value)} />
+            <input
+                type="text"
+                placeholder="Filtrar"
+                onChange={(ev) => functionFilterItems(ev.target.value)} />
 
             <ul>
-                {elements.elements.map((element) => (
+                {elements.map((element) => (
                     <li >{element}</li>
                 ))}
             </ul>
