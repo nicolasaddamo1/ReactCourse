@@ -1,2 +1,8 @@
-function List() { }
+function List() {
+    return (
+        <>
+
+        </>
+    )
+}
 export default List;
