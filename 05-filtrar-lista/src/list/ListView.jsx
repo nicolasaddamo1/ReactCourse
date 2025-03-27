@@ -2,4 +2,4 @@ function ListView() {
 
 }
 
-export default ListView
+export default ListView;
