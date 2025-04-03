@@ -13,11 +13,11 @@ function TooltipText(props) {
     }
     return (
         <>
-            <span className="tooltip-text" ref={spanElement} onMouseOver={ev => handleMouseOver(ev)}>
+            <span className="tooltip-text" ref={spanElement} onMouseOver={ev => handleMouseOver(ev)} onMouseLeave={ev => setShowTooltip(false)}>
                 {props.children}
             </span>
-            {showTooltip &&
-                <Tooltip domRect={tooltipDomRect} text={props.tooltip} />
+            {
+                showTooltip && <Tooltip domRect={tooltipDomRect} text={props.tooltip} />
             }
         </>
     );
