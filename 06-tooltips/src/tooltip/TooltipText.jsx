@@ -14,7 +14,7 @@ function TooltipText(props) {
             <span className="tooltip-text" ref={spanElement} onMouseOver={ev => handleMouseOver(ev)}>
                 {props.children}
             </span>{
-                <Tooltip domRect={tooltipDomRect} tooltip={props.tooltip} />
+                <Tooltip domRect={tooltipDomRect} text={props.tooltip} />
             }
         </>
     );

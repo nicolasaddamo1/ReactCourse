@@ -1,6 +1,6 @@
 function Tooltip({ text }) {
     return (
-        <span></span>
+        <span>{text}</span>
     )
 
 }
