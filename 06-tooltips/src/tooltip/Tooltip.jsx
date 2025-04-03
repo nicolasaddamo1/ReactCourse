@@ -1,6 +1,10 @@
-function Tooltip({ text }) {
+import { useEffect } from "react";
+
+function Tooltip({ text, domRect }) {
+    useEffect(() => {
+    }, [domRect])
     return (
-        <span>{text}</span>
+        <span className="tooltip">{text}</span>
     )
 
 }
