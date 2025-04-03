@@ -2,7 +2,9 @@ import { useRef } from "react";
 
 function TooltipText(props) {
     const spanElement = useRef()
-    function handleMouseOver(ev) {
+    function handleMouseOver() {
+        const position = spanElement.current.getBoundingClientRect
+        console.log(position());
 
     }
     return (
