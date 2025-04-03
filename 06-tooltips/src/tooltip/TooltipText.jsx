@@ -1,8 +1,10 @@
-function TooltipText({ text }) {
+function TooltipText(props) {
     return (
-        <div className="tooltip-text">
-            {text}
-        </div>
+        <>
+            <span className="tooltip-text">
+                {props.children}
+            </span>
+        </>
     );
 }
 
