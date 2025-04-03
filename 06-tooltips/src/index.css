@@ -1,4 +1,6 @@
 .tooltip-text {
     font-size: 14px;
     color: #521b63;
+    text-decoration: underline;
+    text-emphasis: bold;
 }
