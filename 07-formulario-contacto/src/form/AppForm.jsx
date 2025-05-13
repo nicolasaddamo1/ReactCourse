@@ -8,12 +8,16 @@ function AppForm() {
                         <form>
                             <div>
 
-                                <label htmlFor='name'></label>
+                                <label htmlFor='name'>Nombre:</label>
                                 <Field type="text" name="name"></Field>
                             </div>
                             <div>
-                                <label htmlFor='email'></label>
+                                <label htmlFor='email'>Correo Electronico</label>
                                 <Field type="email" name="email"></Field>
+                            </div>
+                            <div>
+                                <label htmlFor='message'>Mensaje:</label>
+                                <Field type="textArea" name="message"></Field>
                             </div>
 
 
@@ -26,3 +30,5 @@ function AppForm() {
     )
 
 }
+
+export default AppForm;
