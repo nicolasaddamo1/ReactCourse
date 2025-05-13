@@ -20,7 +20,7 @@ function AppForm() {
                                 <Field type="textArea" name="message"></Field>
                             </div>
 
-
+                            <button>Enviar</button>
                         </form>
                     )
 
