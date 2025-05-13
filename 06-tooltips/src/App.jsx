@@ -12,6 +12,7 @@ function App() {
         <p><TooltipText tooltip={"Texto generado"}>Lorem ipsum</TooltipText> dolor sit amet, consectetur adipiscing elit </p>
         <p>Si longus, levis dictata sunt. De quibus cupio scire quid sentias. Eam tum adesse, cum dolor sunt aenean</p>
         <p>Videsne quam sit magna dissensio? Quod quidem iam fit etiam in <TooltipText tooltip={"Esto es lo que hay aqui."}>Academia</TooltipText></p>
+        <p>Vamos a ver <TooltipText tooltip={"Y se hace asi"}>otra forma de hacerlo</TooltipText></p>
       </div>
     </>
   )
