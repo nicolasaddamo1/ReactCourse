@@ -1,4 +1,4 @@
-import { Field, Formik } from 'formik';
+import { ErrorMessage, Field, Formik } from 'formik';
 function AppForm() {
     return (
         <Formik
@@ -16,6 +16,11 @@ function AppForm() {
                 }
                 return errors;
             }}
+            onSubmit={
+                (values) => {
+                    console.log(values)
+                }
+            }
         >
             {
                 ({ isSubmitting, values }) => {
@@ -25,17 +30,19 @@ function AppForm() {
 
                                 <label htmlFor='name'>Nombre:</label>
                                 <Field type="text" name="name"></Field>
+                                <ErrorMessage name="name" component="p" />
                             </div>
                             <div>
                                 <label htmlFor='email'>Correo Electronico</label>
                                 <Field type="email" name="email"></Field>
+                                <ErrorMessage name="email" component="p" />
                             </div>
                             <div>
                                 <label htmlFor='message'>Mensaje:</label>
                                 <Field type="textArea" value={values.message} name="message"></Field>
                             </div>
 
-                            <button>Enviar</button>
+                            <button type="submit">Enviar</button>
                         </form>
                     )
 
