@@ -3,6 +3,19 @@ function AppForm() {
     return (
         <Formik
             initialValues={{ message: "Hola, te contacto por... " }}
+            validate={values => {
+                const errors = {};
+                if (!values.name) {
+                    errors.name = 'Campo requerido';
+                }
+                if (!values.email) {
+                    errors.email = 'Campo requerido';
+                }
+                else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+                    errors.email = 'Email no valido';
+                }
+                return errors;
+            }}
         >
             {
                 ({ isSubmitting, values }) => {
