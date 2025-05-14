@@ -1,9 +1,11 @@
 import { Field, Formik } from 'formik';
 function AppForm() {
     return (
-        <Formik>
+        <Formik
+            initialValues={{ message: "Hola, te contacto por... " }}
+        >
             {
-                ({ isSubmitting }) => {
+                ({ isSubmitting, values }) => {
                     return (
                         <form>
                             <div>
@@ -17,7 +19,7 @@ function AppForm() {
                             </div>
                             <div>
                                 <label htmlFor='message'>Mensaje:</label>
-                                <Field type="textArea" name="message"></Field>
+                                <Field type="textArea" value={values.message} name="message"></Field>
                             </div>
 
                             <button>Enviar</button>
