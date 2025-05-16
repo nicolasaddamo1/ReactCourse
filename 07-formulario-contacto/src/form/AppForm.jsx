@@ -24,7 +24,7 @@ function AppForm() {
                     setTimeout(() => {
                         console.log("Datos enviados:", values);
                         setSubmitting(false);
-                    }, 2000);
+                    }, 1200);
                     let formData = new FormData();
                     formData.append("name", values.name);
                     formData.append("email", values.email);
