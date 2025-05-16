@@ -21,10 +21,22 @@ function AppForm() {
             onSubmit={
                 (values, { setSubmitting }) => {
                     const url = import.meta.env.VITE_API_URL;
-                    // setTimeout(() => {
-                    //     console.log("Datos enviados:", values);
-                    //     setSubmitting(false);
-                    // }, 2000);
+                    setTimeout(() => {
+                        console.log("Datos enviados:", values);
+                        setSubmitting(false);
+                    }, 2000);
+                    let formData = new FormData();
+                    formData.append("name", values.name);
+                    formData.append("email", values.email);
+                    formData.append("message", values.message);
+
+                    fetch(url, {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json',
+                        }
+                    })
                 }
             }
         >
