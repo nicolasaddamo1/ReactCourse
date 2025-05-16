@@ -1,4 +1,8 @@
 import { ErrorMessage, Field, Formik } from 'formik';
+import { config } from 'dotenv'
+
+config();
+
 function AppForm() {
     return (
         <Formik
@@ -18,7 +22,7 @@ function AppForm() {
             }}
             onSubmit={
                 (values, { setSubmitting }) => {
-                    console.log(values)
+                    const url = process.env.URL
                 }
             }
         >
@@ -43,7 +47,7 @@ function AppForm() {
                             </div>
 
                             <button type="submit" disabled={isSubmitting}>
-                                {isSubmitting ? "Enviando..." : "Enviar"}
+                                {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                             </button>
                         </form>
                     )
