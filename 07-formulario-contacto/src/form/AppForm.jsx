@@ -17,7 +17,7 @@ function AppForm() {
                 return errors;
             }}
             onSubmit={
-                (values) => {
+                (values, { setSubmitting }) => {
                     console.log(values)
                 }
             }
@@ -42,7 +42,9 @@ function AppForm() {
                                 <Field type="textArea" value={values.message} name="message"></Field>
                             </div>
 
-                            <button type="submit">Enviar</button>
+                            <button type="submit" disabled={isSubmitting}>
+                                {isSubmitting ? "Enviando..." : "Enviar"}
+                            </button>
                         </form>
                     )
 
