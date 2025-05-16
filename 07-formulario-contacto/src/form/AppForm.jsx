@@ -36,7 +36,11 @@ function AppForm() {
                         headers: {
                             'Accept': 'application/json',
                         }
-                    })
+                    }).then(response => {
+                        setSubmitting(false);
+                        alert("Mensaje enviado");
+                    }
+                    )
                 }
             }
         >
