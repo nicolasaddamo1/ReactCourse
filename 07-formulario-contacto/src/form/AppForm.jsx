@@ -52,12 +52,12 @@ function AppForm() {
 
                                 <label htmlFor='name'>Nombre:</label>
                                 <Field type="text" name="name"></Field>
-                                <ErrorMessage name="name" component="p" />
+                                <ErrorMessage name="name" className='error-message' component="p" />
                             </div>
                             <div>
                                 <label htmlFor='email'>Correo Electronico</label>
                                 <Field type="email" name="email"></Field>
-                                <ErrorMessage name="email" component="p" />
+                                <ErrorMessage name="email" className='error-message' component="p" />
                             </div>
                             <div>
                                 <label htmlFor='message'>Mensaje:</label>
