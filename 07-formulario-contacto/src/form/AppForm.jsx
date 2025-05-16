@@ -47,7 +47,7 @@ function AppForm() {
             {
                 ({ isSubmitting, values, handleSubmit }) => {
                     return (
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} className="form">
                             <div>
 
                                 <label htmlFor='name'>Nombre:</label>
