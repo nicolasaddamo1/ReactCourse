@@ -1,7 +1,5 @@
 import { ErrorMessage, Field, Formik } from 'formik';
-import { config } from 'dotenv'
 
-config();
 
 function AppForm() {
     return (
@@ -22,14 +20,18 @@ function AppForm() {
             }}
             onSubmit={
                 (values, { setSubmitting }) => {
-                    const url = process.env.URL
+                    const url = import.meta.env.VITE_API_URL;
+                    // setTimeout(() => {
+                    //     console.log("Datos enviados:", values);
+                    //     setSubmitting(false);
+                    // }, 2000);
                 }
             }
         >
             {
-                ({ isSubmitting, values }) => {
+                ({ isSubmitting, values, handleSubmit }) => {
                     return (
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div>
 
                                 <label htmlFor='name'>Nombre:</label>
@@ -43,7 +45,7 @@ function AppForm() {
                             </div>
                             <div>
                                 <label htmlFor='message'>Mensaje:</label>
-                                <Field type="textArea" value={values.message} name="message"></Field>
+                                <Field as="textarea" name="message"></Field>
                             </div>
 
                             <button type="submit" disabled={isSubmitting}>
