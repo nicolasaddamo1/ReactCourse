@@ -16,6 +16,12 @@
 }
 
 
+[type="text"],
+[type="email"],
+textarea,
+button {
+    padding: 12px
+}
 
 button {
     display: block;
