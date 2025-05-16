@@ -7,3 +7,10 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: gray
 }
+
+.error-message {
+    background-color: rgb(200, 50, 50, 0.2);
+    color: rgb(200, 50, 50, 1);
+    padding: 4px;
+    border-radius: 4px;
+}
